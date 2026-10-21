@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shrtn — make links shorter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page" id="page">
+    <header class="top">
+      <span class="logo">shrtn</span>
+      <nav aria-label="Primary"><a href="#">Pricing</a><a href="#">API</a><a href="#">Log in</a></nav>
+    </header>
+
+    <section class="hero">
+      <h1>Long links are a thing of the past.</h1>
+      <p class="lede">Paste any URL and we'll make it shorter. Trusted by 4 million links and at least one cat.</p>
+
+      <form id="form" class="shorten" novalidate>
+        <label for="url" class="sr">Long URL</label>
+        <input id="url" type="url" placeholder="https://example.com/a/very/long/path?with=far&too=many&params=true" autocomplete="off">
+        <button type="submit">Shorten</button>
+      </form>
+
+      <p class="result" id="result" role="status" aria-live="polite"></p>
+      <button class="reset" id="reset" type="button" hidden>Make it long again</button>
+    </section>
+
+    <section class="stats" aria-label="Facts">
+      <div><strong>0.3s</strong><span>average shortening time</span></div>
+      <div><strong>99.9%</strong><span>of links are shorter than before</span></div>
+      <div><strong>1</strong><span>cat on the team</span></div>
+    </section>
+
+    <footer>Terms · Privacy · Please stop clicking</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
